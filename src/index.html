@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Tesselar introduction to best practices in web course">
+    <meta name="keys" content="course, javascript, html, css">
+    <link rel="icon" href="img/icono.jpg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <title>Curso Desarrollo Web Tesselar</title>
+</head>
+
+<body>
+
+    <header class="back">
+        <h1 class="headerStyle">Curso de Desarrolo Web</h1>
+    </header>
+    <div class="w1024">
+        <div class="center whiteStyle">
+            <header>
+                <h1>Agregar Persona</h1>
+            </header>
+          
+                <input type="text" required="required" maxlength="20" class="input" placeholder="Nombre..." name="name" id="nombre">
+                <br>
+                <br>
+                <button class="btn" value="Agregar" onclick="add()">Agregar</button>
+
+        </div>
+        <section class="whiteStyle">
+            <header>
+                <h1>Lista de Asistentes</h1>
+            </header>
+            <ul id="listaAsistentes">
+                <script>
+                    var myList = ["a", "bj", "c", "df"];
+                    var mainList = document.getElementById("listaAsistentes");
+
+                    for (var i = 0; i < myList.length; i++) {
+                        var item = myList[i];
+                        var elem = document.createElement("li");
+                        elem.innerText=item;
+                        mainList.appendChild(elem);
+                    }
+
+                    function add(){
+                       myList.push("Hola");
+                    }
+
+                </script>
+            </ul>
+        </section>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
